@@ -18,7 +18,7 @@ public class Pizza {
     private String masa = "Normal";
     private String tipo = "Básica";
     private String tamaño = "Pequeña";
-    List<String> listaIngredientes = new ArrayList<>();
+    private List<String> listaIngredientes = new ArrayList<>();
     private final double NORMAL = 9.0;
     private final double INTEGRAL = 9.5;
     private final double BASICA = 3.0;
@@ -65,6 +65,14 @@ public class Pizza {
 
     public void setTamaño(String tamaño) {
         this.tamaño = tamaño;
+    }
+    
+    public List<String> getListaIngredientes() {
+        return listaIngredientes;
+    }
+
+    public void setListaIngredientes(List<String> listaIngredientes) {
+        this.listaIngredientes = listaIngredientes;
     }
     
     public Double calcularPrecio(){
@@ -192,5 +200,4 @@ public class Pizza {
         resultado += "\nTOTAL\t\t\t"+dosDec.format(precioTotal);
         return resultado;
     }
-    
 }

@@ -262,7 +262,7 @@ public class Pizzeria3b extends javax.swing.JFrame {
     }//GEN-LAST:event_tipoPizzaActionPerformed
 
     private void ingredientesExtraValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_ingredientesExtraValueChanged
-        miPizza.listaIngredientes = ingredientesExtra.getSelectedValuesList();
+        miPizza.setListaIngredientes(ingredientesExtra.getSelectedValuesList());
         textoPedido.setText(miPizza.pedido());
     }//GEN-LAST:event_ingredientesExtraValueChanged
 

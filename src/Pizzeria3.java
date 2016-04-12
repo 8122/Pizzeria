@@ -16,11 +16,6 @@ import javax.swing.ButtonModel;
  */
 public class Pizzeria3 extends javax.swing.JFrame {
 
-    double precio;
-    double suplemento = 0.0;
-    double PRECIO_NORMAL = 9.0;
-    double PRECIO_INTEGRAL = 9.5;
-    double sumaIngredientes;
     String opcionMasa;
     String opcionTipo;
     String opcionTamaño;
@@ -264,22 +259,7 @@ public class Pizzeria3 extends javax.swing.JFrame {
             case "Mexicana":
                 miPizza.setTipo("Mexicana");
         }
-        miPizza.listaIngredientes.clear();
-        if(ingredientesExtra.isSelectedIndex(1)){//Jamón
-            miPizza.listaIngredientes.add("Jamón");
-        }
-        if(ingredientesExtra.isSelectedIndex(2)){//Queso
-            miPizza.listaIngredientes.add("Queso");
-        }
-        if(ingredientesExtra.isSelectedIndex(3)){//Tomate
-            miPizza.listaIngredientes.add("Tomate");
-        }
-        if(ingredientesExtra.isSelectedIndex(4)){//Cebolla
-            miPizza.listaIngredientes.add("Cebolla");
-        }
-        if(ingredientesExtra.isSelectedIndex(5)){//Olivas
-            miPizza.listaIngredientes.add("Olivas");
-        }
+        miPizza.setListaIngredientes(ingredientesExtra.getSelectedValuesList());
         opcionTamaño = tamaño.getModel().getValue().toString();
         switch(opcionTamaño){
             case "Pequeña":
